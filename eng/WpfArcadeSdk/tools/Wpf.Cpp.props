@@ -262,7 +262,7 @@
       <AdditionalOptions Condition="('$(ManagedCxx)'=='false') and ('$(ExplicitCrts)'=='true')">%(AdditionalOptions) $(NoDefaultLibClauseForRuntimeLibs) $(DisallowLibClause)</AdditionalOptions>
       <AdditionalOptions Condition="'$(DllRenameClause)'!=''">%(AdditionalOptions) $(DllRenameClause)</AdditionalOptions>
       <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>
-      <AdditionalOptions Condition="'$(ManagedCxx)'=='true'">%(AdditionalOptions) /keyfile:$(AssemblyOriginatorKeyFile) /delaysign</AdditionalOptions>
+      <AdditionalOptions Condition="'$(ManagedCxx)'=='true'">%(AdditionalOptions) /keyfile:$(AssemblyOriginatorKeyFile) /delaysign /opt:ref</AdditionalOptions>
       
       <ProgramDatabaseFileName>$(IntermediateOutputPath)$(TargetName).pdb</ProgramDatabaseFileName>
     </Link>
